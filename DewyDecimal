@@ -1,0 +1,86 @@
+DEwy Decimal Classification
+assign unique code to each item based on subject matter
+-Subject analysis, main class, division and subsections, decimal notation for sub divisions, combine all assigned numbers
+
+Add book
+Catalogue with Dewy classification
+Order books in shelf/ update sequence of books
+
+﻿	LIBRARY MANAGEMENT SYSTEM NEW GENERATION UNIVERSITY COLLEGE
+2.	Current system
+Existing Problems of the system:
+In the modern age, libraries are suffering from many problems including a lack of space, ineffective staff,
+and improper management. Without a proper system in place, most libraries portray a quite haphazard
+picture to the readers.
+The library of new generation University college uses paper and pen to record details about books and stores records of the books in an ftp server that in unavailable. The librarian said the books need to be organized based on the questionnaire sent to him
+3.	Proposed system
+	3.1	Overview
+Objective of library management system:
+•
+The primary objective of any library system is to collect, store, organize, retrieve and make
+available the information sources to the information users.
+Existing Problems of the system:
+In the modern age, libraries are suffering from many problems including a lack of space, ineffective staff,
+and improper management. Without a proper system in place, most libraries portray a quite haphazard
+picture to the readers.
+	3.2	
+Functional requirements:
+The Library Management System database keeps track of readers with the following considerations –
+* The system keeps track of the staff with a single point authentication system comprising login Id and
+password.
+* Staff maintains the book catalog with its ISBN, Book title, price(in INR), category(novel, general, story),
+edition, author Number and details.
+* A publisher has publisher Id, Year when the book was published, and name of the book.* Readers are registered with their user_id, email, name (first name, last name), Phone no (multiple
+entries allowed), communication address. The staff keeps track of readers.
+* Readers can return/reserve books that stamps with issue date and return date. If not returned within
+the prescribed time period, it may have a due date too.
+* Staff also generate reports that has readers id, registration no of report, book no and return/issue info.
+	3.3	Nonfunctional requirements  
+Availability refers to the ability of the library management system to be accessible and operational when needed. This includes ensuring that the system is reliable and can handle unexpected failures without significant impact on its functionality. The LMS should have high availability to ensure that library staff and patrons can access the system at any time without disruptions.
+Usability is a critical non-functional requirement for a library management system as it directly impacts user satisfaction and efficiency. The LMS should be intuitive and easy to use for both library staff and students. It should provide a user-friendly interface that allows users to perform tasks such as searching for books, checking out materials, and managing their accounts with minimal effort.
+Performance is another crucial non-functional requirement for a library management system. It encompasses factors such as response time, throughput, and resource utilization. The LMS should be capable of handling concurrent user requests efficiently without experiencing significant delays or slowdowns.
+Scalability refers to the ability of the library management system to accommodate increasing workloads and growing demands over time. As libraries expand their collections and services, the LMS should be able to scale seamlessly to support these changes without compromising performance or availability.
+	3.4	System models
+		3.4.1 Use case model
+
+		3.4.2 Scenarios
+User who registers himself as a new user initially is regarded as staff or student for the library system. 
+        ◦ For the user to get registered as a new user, registration forms are available that is needed to be fulfilled by the user. 
+        ◦ After registration, a library card is issued to the user by the librarian. On the library card, an ID is assigned to cardholder or user. 
+    2. After getting the library card, a new book is requested by the user as per there requirement. 
+    3. After, requesting, the desired book or the requested book is reserved by the user that means no other user can request for that book. 
+    4. Now, the user can renew a book that means the user can get a new due date for the desired book if the user has renewed them. 
+    5. If the user somehow forgets to return the book before the due date, then the user pays fine. Or if the user forgets to renew the book till the due date, then the book will be overdue and the user pays fine. 
+    6. User can fill the feedback form available if they want to. 
+    7. Librarian has a key role in this system. Librarian adds the records in the library database about each student or user every time issuing the book or returning the book, or paying fine. 
+    8. Librarian also deletes the record of a particular student if the student leaves the college or passed out from the college. If the book no longer exists in the library, then the record of the particular book is also deleted. 
+    9. Updating database is the important role of Librarian. 
+
+		3.4.3 Dynamic models
+
+		3.4.4 Object models
+Aggregation – Aggregation simply shows a relationship where one thing can exist independently of other thing. It means to create or compose different abstractions together in defining a class. Aggregation is represented as a part of relationship in class diagram. In diagram given below, we can see that aggregation is represented by an edge with a diamond end pointing towards superclass. The “Library Management System” is superclass that consists of various classes. These classes are User, Book, and Librarian as shown in diagram. Further, for “Account” class, “User” is a superclass. All of these, share a relationship and these relationships are known as aggregate relationships. 
+
+    2. Multiplicity – Multiplicity means that number of elements of a class is associated with another class. These relations can be one-to-one, many-to-many, and many-to-one or one-to-many. For denoting one element we use 1, for zero elements we use 0, and for many elements we use *. We can see in diagram; many users are associated with many books denoted by * and this represents a many-to-many type of relationship. One user has only one account that is denoted by 1 and this represents a one-to-one type of relationship. Many books are associated with one librarian and this represents many-to-one or one-to-many type of relationship. All these relationships are shown in diagram. 
+
+Attributes of Library Management System :
+    • Library Management System Attributes – UserType, Username, Password 
+    • User Attributes – Name, Id 
+    • Librarian Attributes – Name, Id, Password, SearchString 
+    • Book Attributes – Title, Author, ISBN, Publication 
+    • Account Attributes – no_borrowed_books, no_reserved_books, no_returned_books, no_lost_books fine_amount 
+    • Library database Attributes – List_of_books 
+    • Staff Class Attributes – Dept 
+    • Student Class Attributes – Class 
+Methods of Library Management System :
+    • Library Management System Methods – Login(), Register(), Logout() 
+    • User Methods – Verify(), CheckAccount(), get_book_info() 
+    • Librarian Methods – Verify_librarian(), Search() 
+    • Book Methods – Show_duedt(), Reservation_status(), Feedback(), Book_request(), Renew_info() 
+    • Account Methods – Calculate_fine() 
+    • Library database Methods – Add(), Delete(), Update(), Display(), Search() 
+
+
+		3.4.5 User interface
+4. Reference
+
